@@ -94,4 +94,9 @@ final readonly class Collection implements \IteratorAggregate
     {
         return self::from(\array_slice($this->items, $offset, $length, $preserveKeys));
     }
+
+    public function flatten(): self
+    {
+        return self::from(array_merge(...$this->items));
+    }
 }
