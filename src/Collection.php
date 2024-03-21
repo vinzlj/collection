@@ -99,4 +99,14 @@ final readonly class Collection implements \IteratorAggregate
     {
         return self::from(array_merge(...$this->items));
     }
+
+    public function reduce(\Closure|callable $closure, mixed $initial = null): mixed
+    {
+        return array_reduce($this->items, $closure, $initial);
+    }
+
+    public function join(string $delimiter): string
+    {
+        return implode($delimiter, $this->items);
+    }
 }
