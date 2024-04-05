@@ -61,8 +61,12 @@ final readonly class Collection implements \IteratorAggregate
         return count($this->items);
     }
 
-    public function map(\Closure|callable $closure): self
+    public function map(\Closure|callable $closure, bool $preserveKeys = true): self
     {
+        if (!$preserveKeys) {
+            return self::from(array_values(array_map($closure, $this->items)));
+        }
+
         return self::from(array_map($closure, $this->items));
     }
 
