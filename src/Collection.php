@@ -38,12 +38,12 @@ final readonly class Collection implements \IteratorAggregate
 
     public function first(): mixed
     {
-        return reset($this->items);
+        return $this->items[0] ?? null;
     }
 
     public function last(): mixed
     {
-        return end($this->items);
+        return $this->items[count($this->items) - 1] ?? null;
     }
 
     public function isEmpty(): bool
