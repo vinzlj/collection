@@ -1,17 +1,17 @@
 {
-    "name": "vinzlj/collection",
-    "description": "A simple OOP object to handle collections",
+    "name": "vinzlj/data-set",
+    "description": "A simple OOP object to handle data sets in PHP.",
     "type": "library",
     "license": "mit",
     "autoload": {
         "psr-4": {
-            "Collection\\": "src/"
+            "DataSet\\": "src/"
         }
     },
     "authors": [
         {
             "name": "Vincent Le Jeune",
-            "email": "vinzlj@gmail.com"
+            "email": "vlejeune@proton.me"
         }
     ],
     "require": {}
